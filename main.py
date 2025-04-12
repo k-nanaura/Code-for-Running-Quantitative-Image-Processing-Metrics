@@ -44,8 +44,8 @@ def main():
     output_csv = 'metrics_results.csv'
 
     # 箱ひげ図の保存先ディレクトリ
-    boxplot_save_dir = r'C:\Users\morihiroki\Desktop\mori\results\plots'
-
+    boxplot_save_dir = Please write the path of the folder where the results should be saved.
+    
      # CSVに書くヘッダ行
     csv_header = ['Folder'] + [f"Mean_{m}" for m in selected_metrics] + [f"Std_{m}" for m in selected_metrics]
     
