@@ -31,13 +31,13 @@ def main():
     }
     
     # 参照画像のフォルダパス（必要に応じて変更）
-    ref_folder = r'C:\Users\morihiroki\Desktop\mori\figure\test\gt\\'
+    ref_folder = Please write the path of the reference image folder here
     # 原画像のフォルダパス（必要に応じて変更）
-    raw_folder = r'C:\Users\morihiroki\Desktop\mori\figure\test\hazy\\'
+    raw_folder = Please write the path of the raw image folder here
     
     # 評価対象のフォルダリスト（必要に応じて変更）
     folder_list = [
-        r'C:\Users\morihiroki\Desktop\mori\figure\test\prop\\',
+        Please write the path of the evaluation image folder here
     ]
 
     # 出力CSVファイル名
