@@ -25,7 +25,7 @@ import matplotlib.pyplot as plt
 from scipy.signal import convolve2d
 
 ###########################
-# ここから定量評価計算部分（PSNR, SSIM)
+# ここから参照型定量評価計算部分（PSNR, SSIM)
 ###########################
 def rmetrics(ref, target):
     """
@@ -65,7 +65,7 @@ def rmetrics(ref, target):
 
 
 ###########################
-# ここから定量評価計算部分（UIQM, UCIQE, L*の標準偏差）
+# ここから非参照型定量評価計算部分（UIQM, UCIQE, L*の標準偏差）
 ###########################
 def nmetrics(a):
     """
