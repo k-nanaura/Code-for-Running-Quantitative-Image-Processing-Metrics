@@ -2,7 +2,7 @@ import numpy as np
 from skimage import io
 import os
 import csv
-from src.image_metrics import rmetrics, nmetrics, compute_pcqi, compute_cr, compute_HD_raines, compute_HD_lab, plot_boxplots
+from src.image_metrics import rmetrics, nmetrics, compute_cr, compute_HD_raines, compute_HD_lab, plot_boxplots
 
 ###########################
 # メイン関数
@@ -15,7 +15,7 @@ def main():
     ※参照画像はフォルダ内の順番で対応付ける。
     """
     # 計算したい指標をリストで指定
-    selected_metrics = ["PSNR", "SSIM", "UIQM", "UCIQE", "PCQI", "std_L", "CR", "HD_Raines", "HD_Lab"]  # HDを追加
+    selected_metrics = ["PSNR", "SSIM", "UIQM", "UCIQE", "std_L", "CR", "HD_Raines", "HD_Lab"]  # HDを追加
     
     # 評価指標に対応する関数
     metrics_functions = {
@@ -24,7 +24,6 @@ def main():
         "UIQM": lambda ref, img: nmetrics(img)[0],
         "UCIQE": lambda ref, img: nmetrics(img)[1],
         "std_L": lambda ref, img: nmetrics(img)[2],
-        "PCQI": lambda ref, img: compute_pcqi(ref, img),
         "CR": lambda raw, img: compute_cr(raw, img),  
         "HD_Raines": lambda raw, img: compute_HD_raines(raw, img),
         "HD_Lab": lambda raw, img: compute_HD_lab(raw, img) 
